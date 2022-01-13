@@ -1,6 +1,6 @@
-class WeatherModel {
-  String getWeatherIcon(int condition) {
-    if (condition < 300) {
+class WeatherIcon {
+  String getWeatherIcon(int? condition) {
+    if (condition! < 300) {
       return '🌩';
     } else if (condition < 400) {
       return '🌧';
@@ -19,8 +19,8 @@ class WeatherModel {
     }
   }
 
-  String getMessage(int temp) {
-    if (temp > 25) {
+  String getMessage(int? temp) {
+    if (temp! > 25) {
       return 'It\'s 🍦 time';
     } else if (temp > 20) {
       return 'Time for shorts and 👕';

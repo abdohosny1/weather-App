@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather/const/style/style.dart';
 import 'package:weather/model/constants.dart';
 import 'package:weather/servics/network.dart';
 import 'package:weather/model/weathermodel.dart';
@@ -28,7 +29,7 @@ class _GetWeatherState extends State<GetWeather> {
    dd=temp-272.5;
    condition=weatherdata['weather'][0]['id'];
    city=weatherdata['name'];
-   WeatherModel model = WeatherModel();
+   WeatherIcon model = WeatherIcon();
    wethericon = model.getWeatherIcon(condition);
    massage = model.getMessage(dd.toInt());
 

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:weather/feature/splash/view.dart';
 import 'package:weather/screen/home.dart';
+
+import 'core/router/router.dart';
 
 void main()=>runApp(MyApp());
 
@@ -10,7 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyHome(),
+      navigatorKey: navigatorKey,
+      onGenerateRoute: onGenerateRoute,
+      home: SplashView(),
     );
   }
 }
